@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FE projekts</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <header>
+    <h1>Lapa</h1>
+  </header>
+
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+    <form id="user-form" novalidate>
+      <div class="input-wrapper">
+        <label>
+          Username:
+          <input name="username">
+        </label>
+        <div class="error-msg username"></div>
+      </div>
+
+      <div class="input-wrapper">
+        <label>
+          Email:
+          <input type="email" name="email" id="emailfailed">
+        </label>
+        <div class="error-msg email"></div>
+      </div>
+      <input type="hidden" name="user-id">
+
+      <div class="input-wrapper check">
+        <label>
+          U have a car?
+          <input type="checkbox" name="checkbox" id="checkbox" >
+        </label>
+      <!-- </div>
+
+      <div class="input-wrapper check"> -->
+        <div class="custom-select" id="selectmenu" style="display: none">
+        <label>
+          Your car make:
+              <select name="brand">
+                <option value="" selected>Select car:</option>
+                <option value="Audi">Audi</option>
+                <option value="Gaz">Gaz</option>
+                <option value="Citroen">Citroen</option>
+                <option value="Ford">Ford</option>
+                <option value="Honda">Honda</option>
+                <option value="Jaguar">Jaguar</option>
+                <option value="Land Rover">Land Rover</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="Mini">Mini</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Volvo">Volvo</option>
+                <option value="Bently">Bently</option>
+                <option value="Bugatti">Bugatti</option>
+                <option value="Ferrari">Ferrari</option>
+                <option value="Volkswagen">Volkswagen</option>
+                <option value="Vaz">Vaz</option>
+              </select>
+              </label>
+            </div>
+          </div>
+        <div class="error-msg brand"></div>
+      <input type="hidden" name="user-id">
+
+      <button type="button" id="save-btn">Save</button>
+    </form>
+  </div>
+
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+
+    <main>
+      <table id="users-table">
+        <thead>
+          <td>Username</td>
+          <td>Email</td>
+          <td>Has car</td>
+          <td>Brand</td>
+          <td>Delete user</td>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

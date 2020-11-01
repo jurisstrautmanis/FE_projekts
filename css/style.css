@@ -1,0 +1,171 @@
+body{
+  display: grid;
+  grid-template-rows: 100px 100px auto;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1{
+  text-align: center;
+}
+/* sidebars---------------------------------------------------- */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  /* padding: 16px; */
+}
+
+/* dropdown ieks sidebar---------------------------------------------------- */
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  /* hide original SELECT element: */
+  display: none; 
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 32px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 26px;
+  max-height: 200px;
+  overflow:auto;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  max-height: 235px;
+  overflow:auto;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* input----------------------------------------------------------------- */
+form {
+  color: white;
+  height: 100%;
+}
+.input-wrapper {
+  width: 200px;
+  /* border: 1px solid red; */
+  }
+  input {
+    width: 200px;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    height: 30px;
+    /* padding-left: 5px;
+    padding-right: 5px; */
+    outline: none;
+  }
+  .error-msg {
+    height: 12px;
+    font-size: 10px;
+    /* color: #AA0000; */
+    color: white;
+    /* border: 1px solid red; */
+  }
+ 
+  /* table------------------------------------------------------ */
+  table{
+    border: 2px solid green;
+    max-width: 70vw;
+  }
+  table td{
+    background-color: lightgrey;
+  
+  }
+  table td:nth-child(even) {
+    background-color: pink;
+  }
